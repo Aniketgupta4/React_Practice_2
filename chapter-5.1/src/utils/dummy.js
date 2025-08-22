@@ -1,4 +1,4 @@
-const arr = [{cloth:"T-shirt",offer:"40-80%off"},{cloth:"shirt", offer:"60-80% off"},{cloth:"kurta", offer:"60-80% off"},{cloth:"pajama", offer:"50-80% off"},{cloth:"T-shirt",offer:"40-80%off"},{cloth:"shirt", offer:"60-80% off"},{cloth:"kurta", offer:"60-80% off"},{cloth:"pajama", offer:"50-80% off"}]
+const arr = [{cloth:"T-shirt", price:2000,offer:"40-80%off"},{cloth:"shirt",price:2300, offer:"60-80% off"},{cloth:"kurta",price:2060, offer:"60-80% off"},{cloth:"pajama",price:4040, offer:"50-80% off"},{cloth:"T-shirt",price:2500,offer:"40-80%off"},{cloth:"shirt",price:3560, offer:"60-80% off"},{cloth:"kurta",price:2080, offer:"60-80% off"},{cloth:"pajama",price:4060, offer:"50-80% off"}]
 export default arr
 
 // this is rule -> export default const arr ni likh shakte 

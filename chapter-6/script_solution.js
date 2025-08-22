@@ -33,7 +33,12 @@ function Counter(){
         console.log(count)
     }
 
-   
+      // ******** abhi bhi ui pe show ni hora -> RULE: beacuse aaray by reference store hote hai -> and only valuse hori hai not refernce -> so ui pe show ni hora hai im myntra project sort wale pe -> so duplicate banao ab iska becuse array store in heap and refernce store in stack -> whereas count+1 direct stack pe store hoga kyuki wo value hai ek
+      // setA([...A]) -> ye kardo bs
+      // value change hogi tab hi dom manipuate hoga warna ni hoga dom manipulate -> js karne deta hai or react ni karne deta isi liye react powerful hai
+      // ex -> count = 0 hai and bolray ki phirse count ko 0 kar do so hai toh react ni karega wahi js kar dega 
+      // so duplicate rakhe gai so usko lagega change hua hai so wo change reflect karega
+      
     return(
         <div className="first">
            <h1>Count is : {count}</h1>

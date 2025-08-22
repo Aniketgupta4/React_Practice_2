@@ -5,7 +5,7 @@
 // basically hmne har component ko alag alag mai rakha hai -> so ab unko import karna hoga -> so sabse pehle component wo file se export karo then import hoga wo
 // .js extension hai usko vite jaise .jsx bhi likh shakte hai -> use .jsx jab jsx jyada use kare ho tab
 
-import React from "react";
+import React, { useState } from "react";
 import ReactDOM from "react-dom/client";
 import Card from "./component/Card";
 import Footer from "./component/Footer";
@@ -76,7 +76,39 @@ import { op,ops } from "./utils/dummy";
 
 
 function App(){
-return (
+
+
+  // sort by price functionality
+
+   let [A,setA] = useState(arr);   // arr->A value initialize hoti hai ayse
+
+  // sort hogya only in console -> not show in ui -> so use usestate hook -> so ui pe changes ayegai
+  // so changes ui pe show ho use usestate and replace arr with A because arr->A initialize kiye hai in usestate
+
+  // ******* abhi bhi ui pe show ni hora -> RULE: beacuse aaray by reference store hote hai -> and only valuse hori hai not refernce -> so ui pe show ni hora hai im myntra project sort wale pe -> so duplicate banao ab iska becuse array store in heap and refernce store in stack -> whereas count+1 direct stack pe store hoga kyuki wo value hai ek  
+  // setA([...A]) -> ye kardo bs
+  // value change hogi tab hi dom manipuate hoga warna ni hoga dom manipulate -> js karne deta hai or react ni karne deta isi liye react powerful hai
+  // ex -> count = 0 hai and bolray ki phirse count ko 0 kar do so hai toh react ni karega wahi js kar dega 
+  // so duplicate rakhe gai so usko lagega change hua hai so wo change reflect karega
+
+   function sortArray(){
+      //arr.sort((a,b)=>a.price-b.price)
+      A.sort((a,b)=>a.price-b.price)
+     // setA(A)
+      setA([...A]) // reflect in ui by this change
+      console.log(A)
+   }
+
+
+   // filter by price
+
+   function filterArray(){
+      const b =  arr.filter((value)=> value.price>2499);
+      setA(b)
+   }
+
+
+  return (
       <>
    
      {/* Header */}
@@ -90,10 +122,21 @@ return (
     // jsx: array ke ander kuch bhi ayega samjh jeyaga except object -> so use {} this return array
     // sab element pass ek unique key ho -> optimized hota hai */}
     
+
+    <div className="f">
+    {/* sort by price */}
+     <button className="btns" onClick={sortArray}>Sort by Price</button>
+    
+    {/* filter by price */}
+     <button className="btns" onClick={filterArray}>Price above 2499</button>
+    </div>
+
+
      <div className="middle" style={{display:"flex" , flexWrap:"wrap", gap:"20px"}}>
 
         {
-        arr.map((value,index)=><Card key={index} cloth={value.cloth} offer={value.offer}></Card>)
+        //arr.map((value,index)=><Card key={index} cloth={value.cloth} offer={value.offer} price={value.price}></Card>)
+        A.map((value,index)=><Card key={index} cloth={value.cloth} offer={value.offer} price={value.price}></Card>)
         }         
 
      </div>
