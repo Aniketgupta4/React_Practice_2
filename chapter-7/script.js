@@ -24,9 +24,13 @@ function Main(){
           
           {/* ********* so colorful pura ni chale agar counter mai change ho toh -> so new hook aya -> react memo during export -> so ab counter ke changes colorful ye ni reflect hongai -> first second kuch bhi ni chalgea ab colorful ka */}
           {/* ********* react memo -> ni chalge agar counter pe change hua so colorful ni chalega -> har jagay use memo ni use kare -> beacuase iski bhi kuch cost hai */}
-          {/* react memo -> jab props pass karengai -> so kuch changes hongai so ye allow karegai -> ki render hoga counter pe colorful bhi */}
-          <Colorful name="memo"></Colorful>
+          {/* react memo -> jab props change hongai -> so kuch changes hongai so ye allow karegai -> ki render hoga counter pe colorful bhi */}
+          <Colorful name={count}></Colorful>
           
+          {/* ****** react memo -> basically jab parent bohot sara changes kare tab memo ka use karna */}
+          {/* isme value (props) fix (hardcode) hai -> so render ni hoga bar bar -> react memo dhyan rakhega */}
+          {/*  <Colorful name="john"></Colorful> */}
+
           {/* <Colorful></Colorful> */}
         </>
     )
