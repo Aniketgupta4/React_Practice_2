@@ -10,7 +10,7 @@ function Main(){
 
    const [count ,setCount] = useState(0)
 
-    return(
+    return( 
         <>
         <div>
           <h1>Counter is: {count}</h1>
