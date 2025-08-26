@@ -14,6 +14,7 @@ function Body(){
         const response = await fetch(`https://api.github.com/users?since=${ran}&per_page=${count}`)
       const data = await response.json()
 
+      
       setProfile(data)
       console.group(data)
     }
