@@ -1,0 +1,78 @@
+body{
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.co{
+    border: 2px dashed white;
+    padding: 20px;
+    margin: 10px;
+}
+
+.fi{
+    border: 2px dashed white;
+    padding: 20px;
+    margin: 10px;
+}
+
+
+
+
+
+
+/* stopwatch */
+
+
+
+.w {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: linear-gradient(145deg, #00e5ff, #00bfa5); /* aqua-teal gradient */
+  font-family: "Poppins", sans-serif;
+  border-radius: 30px;
+}
+
+.h {
+  font-size: 3rem;
+  margin-bottom: 30px;
+  color: #ffffff; /* white text for contrast */
+  font-weight: 700;
+  padding: 25px 50px;
+  background: rgba(0, 0, 0, 0.2); /* dark semi-transparent card */
+  border-radius: 25px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  letter-spacing: 2px;
+  backdrop-filter: blur(10px); /* glassy blur effect */
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  text-align: center;
+}
+
+.b {
+  background: #00bfa5; /* teal buttons */
+  color: #ffffff;
+  border: none;
+  padding: 12px 30px;
+  margin: 10px;
+  border-radius: 15px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+}
+
+.b:hover {
+  background: #008e76; /* darker teal on hover */
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.b:active {
+  transform: translateY(1px);
+}
