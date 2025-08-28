@@ -12,3 +12,14 @@ const GlobalContext = createContext("Rohit") // ******* rohit ki space pe state 
 
 
 export default GlobalContext
+
+
+
+
+// s1 -> createContext karo so sabke pass access hoga iska 
+// s2 -> useContext se use kar shakte hai
+// s3 -> for state wagera ke liye -> <GlobalContext.Provider value={{count,setCount}}> use like this   
+                                // <h1>hello</h1>
+                        //          <Third /> 
+                        //          <Second />
+                            //     </GlobalContext.Provider>

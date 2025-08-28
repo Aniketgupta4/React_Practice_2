@@ -33,8 +33,9 @@ function Third(){ // phase2 solution
 
 
            {/* use state -> as a object lete hai  */}
-          <h1>{count} , {setCount}</h1>
-
+          <h1>count is : {count}</h1>
+          <button onClick={()=>setCount(count+1)}>increase</button>
+           {/* ******** by using usecontext -> global state we use ->  jo hmne se first se kiya hai by wrapping */}
     </div>
   )
 }

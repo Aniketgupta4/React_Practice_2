@@ -1,4 +1,5 @@
-// in this we use global first second third page too 
+// in this project we use global first second third page too 
+
 
 // parent (state and setstate isme bana do so sab access kar shalte hai ab)
                 //      // 
@@ -33,6 +34,7 @@
 // -> ******* this props drilling problem use in big projects -> direct send kar shake parent to subchild21 direct -> usecontext introduce
 
 
+
 // solution -> ****** global file bana do sab koi access kar shake -> jo state change ho global pe bhi change ho props pass na karna pade -> global file ko access kare sab direct and use direct
 
                 // parent                          (state and setstate isme bana do so sab access kar shalte hai ab sab log)
@@ -48,6 +50,7 @@
             //
             //
  //     subchild21
+
 
 
 
@@ -87,11 +90,23 @@ function App(){
          <Second /> */}
          
 
+
+
+           {/* ye globalcontext se bahar hai so isko purana rohit wala access hoga only state wala ni hoga access */}
+                      <Second /> 
+
+
+         
+         {/* ********* globalcontext fisrt.js se wale jari hai global page ko and spread to all pages -> isko apan global file pe ni likh shakte hai state wager ko */}
+         {/* jis page ko use karna hai use kar shata hai usecontext se */}
+         {/* props pass karne ki jarurat ni hai ab  */}
          {/* state walo ko global ke andar dalna hai so ye karo -> as a object {} send karo -> ab isko sab access kar shakte hai */}
+        {/* iske ander walo ko hi updated value milegi -> state ki */}
+
         <GlobalContext.Provider value={{count,setCount}}>
              <h1>hello</h1>
              <Third /> 
-             <Second />
+             {/* <Second /> */}
         </GlobalContext.Provider>
 
         
