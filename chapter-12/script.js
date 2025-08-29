@@ -26,7 +26,7 @@ function App(){
         <BrowserRouter>
                   {/* har page pe ye content show hoga -> ui pe show hoga page switch karne ke liye -> without page reload */}
                   {/* ********* Link tag is convert into anchor tag in console -> beacuse it is library optimized way mai Link and browser understand html css js so convert hoga html css js pe  */}
-        
+                  {/* ****** nav hardcode hai yaha -> or kahi bhi likh shakte hai ki agar dashboard pe header ni aye so -> in header ko yaha ni likh ke alag alag individual page jake nav likho yaha common ni likho bs  */}
          {/* header section  */}
          <nav>   
             <Link to="/">Home</Link>
@@ -35,7 +35,7 @@ function App(){
             <Link to="/Details">Details</Link>
          </nav>
 
-                  {/* routes ke ander wale at a time 1 hi chalega -> beacause in each route only 1 page is there to render */}
+                  {/* ****** routes ke ander wale at a time 1 hi chalega -> beacause in each route only 1 page is there to render */}
                   {/* **** ye root wale hai -> start with "/...." -> child wale "...." normal likho */}
            <Routes>
               <Route path="/" element={<Home></Home>}></Route> 
@@ -49,6 +49,7 @@ function App(){
 
               <Route path="/Details" element={<Details></Details>}>
                   {/* index likhna hoga to fix content -> ye fix kar de ray hai details pe open hoye zero wala menas in detail page zero wale ka content show hoye in detail page -> baki dushre route pe show ni hoga content */}
+                   {/* ******* iski nav link details page pe hai -> kyuki nested routing details pe hui hai */}
                    <Route index element={<Zero></Zero>}></Route>
                    <Route path="Hello" element={<Hello></Hello>}></Route>
                    <Route path="Hi" element={<Hi></Hi>}></Route>
