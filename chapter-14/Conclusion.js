@@ -77,7 +77,7 @@
 //            
 //      -> add.js ke ander state banaye hai 
 //      -> **** question ye hai add child2 onclick ko call kare -> so kaise pata chalega konse ko call karna hai 4 tho hai yaha -> 2nd walo ko onclick kare so kaise pata chalgea konse function ko rerun karna hai -> confusion -> ki kaise uniquely define kare -> keys ka concept aya 
-//      -> **** so jiske child ko rerun kare gai so pta chal jayega kisko rerun karna hai by key -> so key attach with state and isko render karo -> key must be unique
+//      -> **** (state change hone pe) so jiske child ko rerun kare gai so pta chal jayega kisko rerun karna hai by key -> so key attach with state and isko render karo -> key must be unique
 //      ------------ keys -------------
 // 
 //       or
@@ -98,8 +98,3 @@
 // 
 //                                    
 // 
-//         
-// 
-//
-//
-//
